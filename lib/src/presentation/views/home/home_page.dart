@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:spark_taxi/src/presentation/views/home/widgets/get_data.dart';
 import 'package:spark_taxi/src/utils/extensions/size_extension.dart';
 import 'package:spark_taxi/src/utils/resources/app_images.dart';
 
@@ -242,7 +243,12 @@ class _HomePageState extends State<HomePage> {
                   24.size_h,
                   GlobalButton(
                     title: "Kutyabman",
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const GetDataPage()));
+                    },
                     radius: 12,
                     color: AppColors.c1AD15C,
                     textColor: AppColors.white,
