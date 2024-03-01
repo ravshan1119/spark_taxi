@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:spark_taxi/src/config/router/app_routes.dart';
 import 'package:spark_taxi/src/presentation/blocs/get_data/get_data_bloc.dart';
 
 class GetDataPage extends StatefulWidget {
@@ -55,7 +56,12 @@ class _GetDataPageState extends State<GetDataPage> {
                             state.getDataProducts[index].title,
                             style: const TextStyle(color: Colors.black),
                           ),
-                        ))
+                        )),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, RouteNames.hiveExamplePage);
+                    },
+                    child: const Text("Hive Example"))
               ],
             ),
           );

@@ -4,6 +4,7 @@ import 'package:spark_taxi/src/presentation/views/auth/register/register_page.da
 import 'package:spark_taxi/src/presentation/views/home/home_page.dart';
 import 'package:spark_taxi/src/presentation/views/routes/routes_page.dart';
 
+import '../../presentation/views/home/widgets/hive_example.dart';
 import '../../presentation/views/splash_screen.dart';
 
 class RouteNames {
@@ -12,6 +13,7 @@ class RouteNames {
   static const String registerPage = "/register_page";
   static const String routesPage = "/routes_page";
   static const String homePage = "/home_page";
+  static const String hiveExamplePage = "/hive_example_page";
 }
 
 class AppRoutes {
@@ -36,6 +38,10 @@ class AppRoutes {
       case RouteNames.homePage:
         return MaterialPageRoute(
           builder: (context) => const HomePage(),
+        );
+      case RouteNames.hiveExamplePage:
+        return MaterialPageRoute(
+          builder: (context) => const HiveExamplePage(),
         );
     }
     return MaterialPageRoute(
